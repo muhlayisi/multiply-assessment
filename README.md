@@ -24,9 +24,8 @@ GET:: /api/v1/shoppe/customer/all
 
 3. To make a purchase
 POST:: /api/v1/shoppe/customer/all 
-:: 
 
-#Purchase Payload
+#Purchase Payload :: 
 {
     "customerId":1,
     "products":[
