@@ -25,7 +25,8 @@ GET:: /api/v1/shoppe/customer/all
 3. To make a purchase
 POST:: /api/v1/shoppe/customer/all 
 :: 
-PAYLOAD: 
+
+#Purchase Payload
 {
     "customerId":1,
     "products":[
@@ -43,7 +44,7 @@ PAYLOAD:
 }
 
 
-# Expected Response Object:
+# Expected Response Object
 {
     "status": "OK",
     "statusCode": 200,
@@ -65,15 +66,15 @@ PAYLOAD:
 }
 
 
-# Possible Response Statuses:
+# Possible Response Statuses
 OK, INSUFICIENT_POINTS, NO_PRODUCTS, CUSTOMER_NOT_FOUND, INVALID_PRODUCTS
 
 
-# Possible Response Status Codes:
+# Possible Response Status Codes
 200, 400
 
 
-# Database Configuration:
+# Database Configuration
 
 Database = h2 (testdb)
 
