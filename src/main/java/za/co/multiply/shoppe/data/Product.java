@@ -22,6 +22,17 @@ public class Product {
 	@Column(name = "cost", nullable = false)
     private double cost;
 
+	public Product() {
+		super();
+	}
+
+	public Product(String code, String name, double cost) {
+		super();
+		setCode(code);
+		setName(name);
+		setCost(cost);
+	}
+
 	public String getCode() {
 		return code;
 	}

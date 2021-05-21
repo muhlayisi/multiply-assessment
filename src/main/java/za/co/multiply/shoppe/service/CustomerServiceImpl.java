@@ -1,6 +1,7 @@
 package za.co.multiply.shoppe.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,13 +21,13 @@ public class CustomerServiceImpl implements CustomerService{
 	}
 
 	@Override
-	public Customer findCustomer(Long id) {
+	public Optional<Customer> findCustomer(int id) {
 		return customerRepository.findById(id);
 	}
 
 	@Override
-	public void saveCustomer(Customer customer) {
-		customerRepository.save(customer);
+	public Customer saveCustomer(Customer customer) {
+		return customerRepository.save(customer);
 	}
 	
 }

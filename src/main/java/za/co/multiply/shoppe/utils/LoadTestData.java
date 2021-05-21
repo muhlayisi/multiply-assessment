@@ -34,9 +34,7 @@ public class LoadTestData {
     }
 
     private void createCustomer(String name, double points) {
-    	Customer c = new Customer();
-    	c.setName(name);
-    	c.setPoints(points);
+    	Customer c = new Customer(name, points);
       
         customerRepository.save(c);
     }

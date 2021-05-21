@@ -11,7 +11,7 @@ public class PurchaseResponse {
 
 	private PurchaseStatus status;
 	private int statusCode;
-	private Long customerId;
+	private int customerId;
 	private List<Product> products;
 	private List<Product> invalidProducts;
 	private double total;
@@ -30,10 +30,10 @@ public class PurchaseResponse {
 		this.statusCode = statusCode;
 	}
 	
-	public Long getCustomerId() {
+	public int getCustomerId() {
 		return customerId;
 	}
-	public void setCustomerId(Long customerId) {
+	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
 	

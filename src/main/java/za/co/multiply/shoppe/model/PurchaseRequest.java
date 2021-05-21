@@ -8,15 +8,16 @@ import za.co.multiply.shoppe.data.Product;
 @Data
 public class PurchaseRequest {
 	
-	private Long customerId;
+	private int customerId;
 	private List<Product> products;
 	
-	public Long getCustomerId() {
+	public int getCustomerId() {
 		return customerId;
 	}
-	public void setCustomerId(Long customerId) {
+	public void setCustomerId(int customerId) {
 		this.customerId = customerId;
 	}
+	
 	public List<Product> getProducts() {
 		return products;
 	}

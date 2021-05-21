@@ -30,7 +30,7 @@ public class ShoppeController {
 	
 	@Autowired
 	private PurchaseService purchaseService;
-
+	
     @GetMapping("/customer/all")
     public ResponseEntity<List<Customer>> getAllCustomers() {
     	return ResponseEntity.ok(customerService.findAllCustomers());
@@ -45,4 +45,5 @@ public class ShoppeController {
     public ResponseEntity<PurchaseResponse> purchase(@RequestBody PurchaseRequest purchaseRequest) {
     	return ResponseEntity.ok(purchaseService.purchaseProducts(purchaseRequest));
     }
+    
 }

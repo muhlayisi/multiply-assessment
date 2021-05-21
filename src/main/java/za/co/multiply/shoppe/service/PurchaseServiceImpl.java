@@ -3,6 +3,7 @@ package za.co.multiply.shoppe.service;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,7 +29,12 @@ public class PurchaseServiceImpl implements PurchaseService{
 		PurchaseResponse purchaseResponse = new PurchaseResponse();
 		purchaseResponse.setCustomerId(purchaseRequest.getCustomerId());
 		
-		Customer customer = customerService.findCustomer(purchaseRequest.getCustomerId());
+		Optional<Customer> optionalCustomer = customerService.findCustomer(purchaseRequest.getCustomerId());
+		Customer customer = null;
+		
+		if(optionalCustomer.isPresent())
+			customer = optionalCustomer.get();
+		
 		if(customer == null) {
 			purchaseResponse.setStatus(PurchaseStatus.CUSTOMER_NOT_FOUND);
 			purchaseResponse.setStatusCode(HttpStatus.BAD_REQUEST.value());

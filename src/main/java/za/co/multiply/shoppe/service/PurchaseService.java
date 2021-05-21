@@ -4,5 +4,7 @@ import za.co.multiply.shoppe.model.PurchaseRequest;
 import za.co.multiply.shoppe.model.PurchaseResponse;
 
 public interface PurchaseService {
+	
 	PurchaseResponse purchaseProducts(PurchaseRequest purchaseRequest);
+	
 }
