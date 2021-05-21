@@ -1,4 +1,4 @@
-# multiply-assessment
+# Multiply-Technical-Assessment
 A basic SpringBoot shop service for multiply job application technical assessment.
 
 
@@ -17,16 +17,14 @@ java -jar shoppe-1.0.0.jar
 
 # REST Service Endpoints:
 1. To get all customers
-URL: /api/v1/shoppe/customer/all
-METHOD: GET
+GET:: /api/v1/shoppe/customer/all
 
 2. To get all products
-URL: /api/v1/shoppe/customer/all
-METHOD: GET
+GET:: /api/v1/shoppe/customer/all
 
 3. To make a purchase
-URL: /api/v1/shoppe/customer/all
-METHOD: POST
+POST:: /api/v1/shoppe/customer/all 
+:: 
 PAYLOAD: 
 {
     "customerId":1,
@@ -43,7 +41,9 @@ PAYLOAD:
         }
     ]
 }
-RESPONSE_OBJECT:
+
+
+# Expected Response Object:
 {
     "status": "OK",
     "statusCode": 200,
@@ -64,12 +64,22 @@ RESPONSE_OBJECT:
     "total": 300.0
 }
 
-POSSIBLE RESPONSE STATUSES:
+
+# Possible Response Statuses:
 OK, INSUFICIENT_POINTS, NO_PRODUCTS, CUSTOMER_NOT_FOUND, INVALID_PRODUCTS
 
-POSSIBLE RESPONSE STATUSES_CODES:
+
+# Possible Response Status Codes:
 200, 400
 
 
-DB CONFIGURATION:
-Memory Database = h2
+# Database Configuration:
+
+Database = h2 (testdb)
+
+username: sa
+
+password:
+    
+To access the h2 memory database: 
+http://localhost:8080/h2-console/
